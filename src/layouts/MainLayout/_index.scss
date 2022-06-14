@@ -1,0 +1,126 @@
+@use '../../assets/styles/abstracts/index' as *;
+.main-layout {
+  background-color: $app-background;
+  display: flex;
+  padding: 30px;
+  max-width: 1227px;
+  gap: 75px;
+  margin: auto;
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 600;
+    max-width: 280px;
+    height: 100vh;
+    max-height: auto;
+    > img {
+      width: 44px;
+      margin-top: 5px;
+    }
+    & > .sidebar-element {
+      .active {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(62deg)
+          brightness(0%) contrast(100%);
+      }
+      display: flex;
+      margin-top: 16px;
+      flex-direction: column;
+      gap: 37px;
+      text-decoration: none;
+      & > .flex {
+        display: flex;
+        padding-left: 1px;
+        text-decoration: none;
+        color: $text-muted;
+
+        & > img {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+  & > .container {
+    display: flex;
+    flex-direction: column;
+    .header {
+      display: flex;
+      max-width: 1090px;
+      gap: 100px;
+      height: 60px;
+
+      & > .inputContainer {
+        max-width: 630px;
+
+        & > img {
+          position: absolute;
+          &.icon {
+            width: 24px;
+            padding-top: 15px;
+            padding-left: 15px;
+            cursor: pointer;
+          }
+        }
+        & > input {
+          height: 50px;
+          width: 510px;
+          padding-left: 45px;
+          text-align: left;
+          font-size: 16px;
+          font-weight: 540;
+          border-radius: 12px;
+          background-color: $search-background;
+          outline: none;
+          border: 2px solid $search-background;
+        }
+      }
+      .userContainer {
+        font-size: 20px;
+        font-weight: 510;
+        height: 52px;
+        display: flex;
+        gap: 17px;
+        justify-content: space-between;
+        color: $text-muted;
+        & > .notificationContainer {
+          border: 2px solid$border;
+          border-radius: 12px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 87px;
+        }
+        & > .setttingContainer {
+          width: 62px;
+          padding-top: 12px;
+          border: 2px solid$border;
+          text-align: center;
+          border-radius: 12px;
+          cursor: pointer;
+        }
+        & > .userName {
+          width: 68px;
+          padding-top: 15px;
+          text-align: center;
+          font-size: 16px;
+        }
+        & > .userImg {
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          border-radius: 50%;
+          display: flex;
+          margin-top: 4px;
+
+          & > img {
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

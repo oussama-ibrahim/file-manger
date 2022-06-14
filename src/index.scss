@@ -1,0 +1,18 @@
+@use './assets/styles/base';
+
+@use './layouts/MainLayout';
+
+@use './components/LoadingScreen';
+
+@use './components/UI';
+@use './components/Files';
+// pages
+@use './views/Home';
+
+@use 'views/AllFiles';
+
+@use 'views/Starred';
+
+@use 'views/NotFound';
+
+@use 'views/Archived';

@@ -1,0 +1,34 @@
+@use '../../assets/styles/abstracts/index' as *;
+.starred {
+  width: 900px;
+  margin-top: -10px;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+    > .logo-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+      > h2 {
+        font-size: 48px;
+        margin: 0;
+      }
+      > .logo {
+        background-color: $quaternary;
+        border-radius: 12px;
+        height: 50px;
+        width: 50px;
+
+        > img {
+          width: 30px;
+          padding: 10px;
+          filter: invert(100%) sepia(100%) saturate(100%) brightness(100%)
+            contrast(50);
+        }
+      }
+    }
+  }
+}
